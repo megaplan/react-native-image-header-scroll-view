@@ -33,7 +33,7 @@ declare module "react-native-image-header-scroll-view" {
         renderFixedForeground?: () => React.ReactElement;
         renderForeground?: () => React.ReactElement;
         renderHeader?: () => React.ReactElement; // default is an empty view.
-        foregroundExtrapolate: ?string;
+        foregroundExtrapolate?: string;
         renderTouchableFixedForeground?: () => React.ReactElement;
         ScrollViewComponent?: React.ComponentType<ScrollViewProps>;
         scrollViewBackgroundColor?: string; // defaults to white.
@@ -42,6 +42,7 @@ declare module "react-native-image-header-scroll-view" {
         headerContainerStyle?: object;
         fixedForegroundContainerStyles?: object;
         disableHeaderGrow?: boolean;
+        scrollViewContainerStyle?: object;
     }
 
     interface HeaderImageScrollViewState {
@@ -52,16 +53,16 @@ declare module "react-native-image-header-scroll-view" {
     class HeaderImageScrollView extends React.Component<HeaderImageScrollViewProps, HeaderImageScrollViewState> {}
 
     interface TriggeringViewProps {
-    onBeginHidden?: Function;
-    onHide?: Function;
-    onBeginDisplayed?: Function;
-    onDisplay?: Function;
-    onTouchTop?: Function;
-    onTouchBottom?: Function;
-    children?: React.ReactNode;
-    onLayout?: Function;
-    bottomOffset?: number;
-    topOffset?: number;
+        onBeginHidden?: Function;
+        onHide?: Function;
+        onBeginDisplayed?: Function;
+        onDisplay?: Function;
+        onTouchTop?: Function;
+        onTouchBottom?: Function;
+        children?: React.ReactNode;
+        onLayout?: Function;
+        bottomOffset?: number;
+        topOffset?: number;
     }
 
     interface TriggeringViewState {
